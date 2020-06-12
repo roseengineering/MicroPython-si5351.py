@@ -19,6 +19,8 @@ This repo contains another of my adaptations of the Adafruit SI5351 library
 at https://github.com/adafruit/Adafruit_Si5351_Library.
 This time it is for Micropython.
 
+### Simple Example
+
 Import the library into your Micropython code to gain access to the 
 SI5351 over I2C.
 
@@ -47,7 +49,9 @@ si.setupMultisynth(0, si.PLL_A, 45)
 si.enableOutputs(True)
 ```
 
-I also added a function called set_freq.  This function
+### The set_freq() method
+
+I also added a method called set_freq.  This function
 calculates and sets the multisynth and R dividers
 based on the current VCO frequency of the PLL in use.
 It only works for frequencies below about 100Mhz.
@@ -65,6 +69,8 @@ si.set_freq(clk, si.PLL_A, 7000000)
 si.enableOutputs(True)
 ```
 
+### VFO Example
+
 The next example is an implementation of a VFO using the SI5351.
 It was designed for the Heltec ESP8266 WIFIKIT Version A
 and it is provided in the repo as example.py.
@@ -75,6 +81,10 @@ on the SI5351.  When the code first starts clk 0 will output 7Mhz.
 Turning the knob will change the clk 0 frequency in 10 Hz steps.
 
 { run("cat example.py", "python") }
+
+#### Implementation
+
+![](example.jpg)
 
 """)
 
