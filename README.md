@@ -57,7 +57,7 @@ It was designed for the Heltec ESP8266 WIFIKIT Version A
 and it is provided in the repo as example.py.
 
 To use the VFO, attach a rotary knob to GPIO pins 12 and 13 of the WIFIKIT.
-Next connect GPIO pins 4 and 5 for SDA and SCL on the same I2C pins
+Next connect GPIO pins 4 and 5 for SDA and SCL to the same I2C pins
 on the SI5351.  When the code first starts clk 0 will output 7Mhz.
 Turning the knob will change the clk 0 frequency in 10 Hz steps.
 
