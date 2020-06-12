@@ -54,7 +54,7 @@ si.enableOutputs(True)
 
 The next, fuller example is an implementation of a VFO using the SI5351.
 It was designed for the Heltec ESP8266 WIFIKIT Version A
-and it provided in the repo as example.py.
+and it is provided in the repo as example.py.
 
 To use the VFO, attach a rotary knob to GPIO pins 12 and 13 of the WIFIKIT.
 Next connect GPIO pins 4 and 5 for SDA and SCL on the same I2C pins
