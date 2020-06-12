@@ -52,7 +52,7 @@ si.set_freq(clk, si.PLL_A, 7000000)
 si.enableOutputs(True)
 ```
 
-The next, fuller example is an implementation of a VFO using the SI5351.
+The next example is an implementation of a VFO using the SI5351.
 It was designed for the Heltec ESP8266 WIFIKIT Version A
 and it is provided in the repo as example.py.
 
