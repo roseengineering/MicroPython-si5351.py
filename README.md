@@ -102,7 +102,6 @@ class Knob:
         a, b = latch2(self.pina, self.pinb)
         if a == 1 and self.last_a == 0:
             self.value += 1 if a == b else -1
-            print('-----------------')
             print('{:d}'.format(self.value))
             si.set_freq(0, si.PLL_A, center + knob.value * 10)
         self.last_a = a

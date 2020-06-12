@@ -49,7 +49,6 @@ class SI5351_I2C:
 
 
     def write8(self, register, value):
-        print('buf', value, bytes([value]))
         self.i2c.writeto_mem(self.address, register, bytes([value]))
 
 
