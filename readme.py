@@ -7,7 +7,6 @@ def run(command, language="bash"):
     proc.wait()
     return f"""
 ```{language}
-$ {command}
 {buf}\
 ```
 """
@@ -25,7 +24,7 @@ SI5351 over I2C.
 
 The below example sets the SI5351 clock output 0 to 13.703704 MHz.
 
-```
+```python
 from machine import Pin, I2C
 import si5351
 
@@ -55,7 +54,7 @@ It only works for frequencies below about 100Mhz.
 
 Here is an example:
 
-```
+```python
 ...
 # vco = 25 MHz * 32 = 800 MHz
 si.setupPLL(si.PLL_A, 32)
