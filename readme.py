@@ -20,7 +20,10 @@ This repo contains another of my adaptations of the Adafruit si5351 library
 at https://github.com/adafruit/Adafruit_Si5351_Library.
 This time it is for Micropython.
 
-Import it in your Micropython code to gain access to the SI5351 over I2C.  The example below sets the si5351 clock output 0 to 13.703704 MHz.
+Import the library into your Micropython code to gain access to the 
+SI5351 over I2C.
+
+The below example sets the si5351 clock output 0 to 13.703704 MHz.
 
 ```
 from machine import Pin, I2C
