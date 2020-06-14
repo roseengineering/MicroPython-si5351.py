@@ -84,7 +84,8 @@ Turning the knob will change the clk 0 frequency in 10 Hz steps.
 
 #### Implementation
 
-![](example.jpg)
+![](example2.png)
+![](example1.jpg)
 
 """)
 
