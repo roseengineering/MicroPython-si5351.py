@@ -155,7 +155,6 @@ PIN_B   = 12
 
 # constants
 
-fd = 7000000
 mult = 32
 clk = 0
 
@@ -173,18 +172,20 @@ def on_uart(freq):
     except ValueError:
         pass
 
+# initialize
+
 i2c = I2C(-1, Pin(PIN_SCL), Pin(PIN_SDA))
 si = SI5351_I2C(i2c)
 si.setupPLL(si.PLL_A, mult)
-
 encoder = Encoder(Pin(PIN_A, Pin.IN, Pin.PULL_UP), Pin(PIN_B, Pin.IN, Pin.PULL_UP))
 ble = bluetooth.BLE()
 uart = BLEUART(ble)
 
+# main 
+
+on_uart(7000000)
 uart.irq(handler=on_uart)
 encoder.irq(handler=on_encoder)
-
-on_uart(fd)
 si.enableOutputs(True)
 
 while True:

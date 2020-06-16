@@ -56,7 +56,7 @@ si.set_freq(clk, si.PLL_A, 7000000)
 si.enableOutputs(True)
 ```
 
-### VFO Example
+### ESP8266 VFO Example
 
 The next example is an implementation of a VFO using the SI5351.
 It was designed for the Heltec ESP8266 WIFIKIT Version A
@@ -163,9 +163,14 @@ while True:
 ```
 
 
-#### Implementation
-
 ![](example2.png)
 ![](example1.jpg)
 
+### ESP32 BLE VFO Example
+
+Script example32.py does the same thing as the prior example
+but the frequency can also be set and read using bluetooth.
+Connect to the _bluefo_ device using the _nRF Connect_ app.
+
+![](example32.jpg)
 
